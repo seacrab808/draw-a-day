@@ -11,7 +11,7 @@ function App() {
       <Route element={<DashBoard />}>
         <Route index element={<LandingPage />} />
         <Route path="auth">
-          <Route path="signIn" element={<LoginPage />} />
+          <Route path="login" element={<LoginPage />} />
           <Route path="signIn" element={<SignInPage />} />
         </Route>
         <Route path="home" element={<HomePage />} />

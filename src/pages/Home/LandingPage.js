@@ -1,8 +1,13 @@
 import React from "react";
 import Container from "../../components/layout/style";
+import Landing from "../../components/layout/Landing";
 
 const LandingPage = () => {
-  return <Container>랜딩 페이지</Container>;
+  return (
+    <Container>
+      <Landing />
+    </Container>
+  );
 };
 
 export default LandingPage;
