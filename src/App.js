@@ -3,6 +3,7 @@ import DashBoard from "./components/layout/DashBoard";
 import SignInPage from "./pages/Auth/SignInPage";
 import LoginPage from "./pages/Auth/LoginPage";
 import LandingPage from "./pages/Home/LandingPage";
+import HomePage from "./pages/Home/HomePage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="signIn" element={<LoginPage />} />
           <Route path="signIn" element={<SignInPage />} />
         </Route>
+        <Route path="home" element={<HomePage />} />
       </Route>
     </Routes>
   );
