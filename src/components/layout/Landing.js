@@ -33,19 +33,21 @@ const btnWrap = css`
   font-size: 1.4rem;
 
   div {
-    padding: 0.7rem;
+    padding: 0.6rem;
     margin: 0.5rem;
     border-radius: 0.7rem;
     width: 90%;
 
     background-color: #5393d9;
     color: #fff;
+    box-shadow: 1px 0px 1px 0px #90a0c6;
 
-    :hover {
-      background-color: #8ec8f6;
-      transition: 1s;
+    :hover, :active {
+      background-color: #63ace4;
+      transition: .2s;
       cursor: pointer;
     }
+    
   }
 `;
 
@@ -61,6 +63,12 @@ const nonOp = css`
   font-size: 13px;
   text-decoration: underline;
   color: #90a0c6;
+
+  :hover, :active {
+    color: #5393d9;
+    cursor: pointer;
+    transition: .2s
+  }
 `;
 
 const myInfoWrap = css`
