@@ -1,9 +1,8 @@
 /** @jsxImportSource @emotion/react */
-
-import React from "react";
 import logo from "../../assets/drawaday_logo.png";
 import myInfo from "../../assets/drawaday_my.png";
 import { css } from "@emotion/react";
+import { useNavigate } from "react-router-dom";
 
 const mainWrap = css`
   display: flex;
@@ -80,18 +79,34 @@ const myInfoWrap = css`
   }
 `;
 
+
 const Landing = () => {
+  const navigate = useNavigate();
+
+  const useLogIn = () => {
+    navigate("/auth/login")
+  }
+
+  const useSignIn = () => {
+    navigate("/auth/signIn")
+  }
+
+  const useHome = () => {
+    navigate("/home")
+  }
+
+
   return (
     <div css={mainWrap}>
       <div css={logoWrap}>
         <img src={logo} alt="logo" />
       </div>
       <div css={btnWrap}>
-        <div css={login}>로그인</div>
-        <div css={signin}>회원가입</div>
+        <div onClick={useLogIn} css={login}>로그인</div>
+        <div css={signin} onClick={useSignIn}>회원가입</div>
         <p css={nonOp}>비회원으로 사용하기</p>
       </div>
-      <div css={myInfoWrap}>
+      <div css={myInfoWrap} onClick={useHome}>
         <img src={myInfo} alt="myInfo" />
       </div>
     </div>
