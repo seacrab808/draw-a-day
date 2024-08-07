@@ -104,9 +104,9 @@ const Landing = () => {
       <div css={btnWrap}>
         <div onClick={useLogIn} css={login}>로그인</div>
         <div css={signin} onClick={useSignIn}>회원가입</div>
-        <p css={nonOp}>비회원으로 사용하기</p>
+        <p css={nonOp} onClick={useHome}>비회원으로 사용하기</p>
       </div>
-      <div css={myInfoWrap} onClick={useHome}>
+      <div css={myInfoWrap}>
         <img src={myInfo} alt="myInfo" />
       </div>
     </div>
