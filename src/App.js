@@ -4,6 +4,7 @@ import SignInPage from "./pages/Auth/SignInPage";
 import LoginPage from "./pages/Auth/LoginPage";
 import LandingPage from "./pages/Home/LandingPage";
 import HomePage from "./pages/Home/HomePage";
+import CreatePage from "./pages/Create/CreatePage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="signIn" element={<SignInPage />} />
         </Route>
         <Route path="home" element={<HomePage />} />
+        <Route path="create" element={<CreatePage />} />
       </Route>
     </Routes>
   );
