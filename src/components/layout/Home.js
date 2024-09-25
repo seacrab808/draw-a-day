@@ -8,6 +8,7 @@ const headerWrap = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 0.7rem 1.5rem;
   background-color: #abcdf7;
   color : white;
@@ -32,10 +33,16 @@ const rightBar = css`
   }
 `;
 
+const selectWrap = css`
+  position: relative;
+`;
+
 const titleWrap = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+
   margin: 1rem;
   padding: 0.5rem 1rem 0.5rem;
 
@@ -112,6 +119,29 @@ const conTextTitle = css`
   font-weight: 300;
 `;
 
+// 컴포넌트 분리 - 월별 드롭다운 바
+const dateDropdown = css`
+  position: absolute;
+  top: 3.5rem;
+  right: 2rem;
+
+  background-color: blue;
+  border-radius: 5px;
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0.8rem;
+  }
+
+  li {
+    text-align: center;
+    padding: 0.4rem;
+    
+    background-color: red;
+  }
+`;
+
 const Home = () => {
   const navigate = useNavigate()
   
@@ -122,38 +152,67 @@ const Home = () => {
   const useDiary = () => {
     navigate('/diary')
   }
-  
+
+
   return (
     <>
+      {/* 상단바에 뒤로가기 버튼 만들 예정 */}
       <div css={headerWrap}>
         <div css={leftBar}>
+          {/* span에 username */}
           안녕하세요, <span>ㅇㅇㅇ</span>님
         </div>
         <div onClick={useCreate} css={rightBar}>
           일기쓰기
         </div>
       </div>
-      <div css={titleWrap}>
-        <div css={dateTitle}>2024년 8월</div>
-        <div css={changeTitle}>날짜 변경</div>
-      </div>
-      <div css={containerWrap}>
 
+      <div css={selectWrap}>
+        <div css={titleWrap}>
+          {/* 날짜 20{year}년 {month}월 */}
+          <div css={dateTitle}>2024년 8월</div>
+          {/* 날짜 변경 시 드롭다운 메뉴바 컴포넌트, 클릭 시 open */}
+          <div css={changeTitle}>날짜 변경</div>
+        </div>
+        <div css={dateDropdown}>
+          <ul>
+            <li>1월</li>
+            <li>2월</li>
+            <li>3월</li>
+            <li>4월</li>
+            <li>5월</li>
+            <li>6월</li>
+            <li>7월</li>
+            <li>8월</li>
+            <li>9월</li>
+            <li>10월</li>
+            <li>11월</li>
+            <li>12월</li>
+          </ul>
+        </div>
+      </div>
+
+      <div css={containerWrap}>
+        {/* 컴포넌트 분리 */}
         <div css={conAndTopWrap} onClick={useDiary}>
           <div css={topImgWrap}>
             <img src={topImg} alt="topImg" />
           </div>
           <div css={container}>
             <div css={conPic}>
+              {/* 저장된 그림 */}
               <img src={logo} alt="logo" />
               </div>
             <div css={conText}>
+              {/* 날짜 {year}년 {month}월 {date}일 */}
               <div css={conTextDate}>24년 8월 12일</div>
-              <div css={conTextTitle}>월요일 에바다</div>
+              {/* {title} */}
+              <div css={conTextTitle}>월요일 에바다ㅇ</div>
             </div>
           </div>
         </div>
 
+        {/* 아래는 웹 css 확인용 더미 데이터 */}
         <div css={conAndTopWrap}>
           <div css={topImgWrap}>
             <img src={topImg} alt="topImg" />
