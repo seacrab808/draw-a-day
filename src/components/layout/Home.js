@@ -118,6 +118,10 @@ const Home = () => {
   const useCreate = () => {
     navigate('/create')
   }
+
+  const useDiary = () => {
+    navigate('/diary')
+  }
   
   return (
     <>
@@ -135,7 +139,7 @@ const Home = () => {
       </div>
       <div css={containerWrap}>
 
-        <div css={conAndTopWrap}>
+        <div css={conAndTopWrap} onClick={useDiary}>
           <div css={topImgWrap}>
             <img src={topImg} alt="topImg" />
           </div>
