@@ -125,20 +125,31 @@ const dateDropdown = css`
   top: 3.5rem;
   right: 2rem;
 
-  background-color: blue;
+  background-color: #abcdf7;
   border-radius: 5px;
 
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0.8rem;
+    padding: 0.7rem;
   }
-
+  
   li {
+    margin: 0.2rem;
+
     text-align: center;
     padding: 0.4rem;
-    
-    background-color: red;
+
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #89b6f0;
+    cursor: pointer;
+
+    :hover {
+      background-color: #6c9fe0;
+      transition: .3s;
+    }
   }
 `;
 
