@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Langing() {
+export default function Landing() {
   return (
     <div>
       landing page
