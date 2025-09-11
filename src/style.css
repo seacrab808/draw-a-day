@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "TheDoodle";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310-2@1.0/TheDoodle.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 100vh;
+
+  font-family: "TheDoodle", sans-serif;
+}
