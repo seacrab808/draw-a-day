@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Langing() {
+export default function Login() {
   return (
     <div>
-      landing page
+      Login Page
     </div>
   )
 }
