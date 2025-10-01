@@ -2,10 +2,8 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-// 제공된 이미지에 맞춰 임의의 아이콘을 가져옵니다.
 import { Palette, CalendarDays, Settings } from 'lucide-react';
 
-// 네비게이션 아이템 정의.
 const navItems = [
   { id: 'palette', icon: Palette, label: '색상' },
   { id: 'calendar', icon: CalendarDays, label: '캘린더' },
@@ -21,7 +19,6 @@ export default function Navbar() {
                  h-[75px] flex items-center justify-around
                  bg-white z-50 border-t border-gray-200"
     >
-      {/* 탭 버튼 목록 */}
       {navItems.map((item) => (
         <button
           key={item.id}
